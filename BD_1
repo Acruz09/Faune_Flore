@@ -1,0 +1,31 @@
+CREATE DATABASE IF NOT EXISTS bd_molecule DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+-- ENTRER DANS LA bd_banque
+USE bd_molecule;
+
+
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table 'tb_molecule'
+--
+
+CREATE TABLE tb_molecule (
+	InChIKey varchar(27) NOT NULL,
+	MolfileName varchar(77) NOT NULL,
+	CRC_Number varchar(7) NOT NULL,
+    Molecule_Name varchar(47) NOT NULL,
+    Molecule_Formula varchar(20) NOT NULL,
+  	Molecule_Weight varchar(20),
+  	Accurate_Mass varchar(10),
+  	CAS_Number varchar(12),
+  	Compound_Types varchar(30),
+    Biological_Source varchar(50),
+    Optical_Rotation varchar(10),
+    Biological_Use varchar(100),
+   	Toxicity varchar(50),
+   	Apply varchar(100),
+  	PRIMARY KEY (InChIKey)
+	)
+ENGINE=InnoDB DEFAULT CHARSET=utf8;
